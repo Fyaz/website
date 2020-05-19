@@ -1,0 +1,292 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">14.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <Name>Node Test</Name>
+    <RootNamespace>Node Test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>a7c281da-bdde-4250-b175-fffa42fb3718</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>server.js</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <NodejsPort>1337</NodejsPort>
+    <StartWebBrowser>true</StartWebBrowser>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="scripts\date.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="scripts\index.js">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="server.js" />
+    <Content Include="webapp\package.json" />
+    <Content Include="README.md" />
+    <Content Include="webapp\.DS_Store" />
+    <Content Include="webapp\about.html" />
+    <Content Include="webapp\blog-single.html" />
+    <Content Include="webapp\blog.html" />
+    <Content Include="webapp\contact.html" />
+    <Content Include="webapp\css\.DS_Store" />
+    <Content Include="webapp\css\ajax-loader.gif" />
+    <Content Include="webapp\css\animate.css" />
+    <Content Include="webapp\css\aos.css" />
+    <Content Include="webapp\css\bootstrap-datepicker.css" />
+    <Content Include="webapp\css\bootstrap.min.css" />
+    <Content Include="webapp\css\bootstrap\.DS_Store" />
+    <Content Include="webapp\css\bootstrap\bootstrap-grid.css" />
+    <Content Include="webapp\css\bootstrap\bootstrap-reboot.css" />
+    <Content Include="webapp\css\css\.DS_Store" />
+    <Content Include="webapp\css\css\bootstrap-reboot.css" />
+    <Content Include="webapp\css\css\mixins\_text-hide.css" />
+    <Content Include="webapp\css\flaticon.css" />
+    <Content Include="webapp\css\icomoon.css" />
+    <Content Include="webapp\css\ionicons.min.css" />
+    <Content Include="webapp\css\jquery.timepicker.css" />
+    <Content Include="webapp\css\magnific-popup.css" />
+    <Content Include="webapp\css\open-iconic-bootstrap.min.css" />
+    <Content Include="webapp\css\owl.carousel.min.css" />
+    <Content Include="webapp\css\owl.theme.default.min.css" />
+    <Content Include="webapp\css\style.css" />
+    <Content Include="webapp\fonts\.DS_Store" />
+    <Content Include="webapp\fonts\flaticon\.DS_Store" />
+    <Content Include="webapp\fonts\flaticon\backup.txt" />
+    <Content Include="webapp\fonts\flaticon\font\flaticon.css" />
+    <Content Include="webapp\fonts\flaticon\font\Flaticon.eot" />
+    <Content Include="webapp\fonts\flaticon\font\flaticon.html" />
+    <Content Include="webapp\fonts\flaticon\font\Flaticon.svg" />
+    <Content Include="webapp\fonts\flaticon\font\Flaticon.ttf" />
+    <Content Include="webapp\fonts\flaticon\font\Flaticon.woff" />
+    <Content Include="webapp\fonts\flaticon\font\_flaticon.scss" />
+    <Content Include="webapp\fonts\flaticon\license\license.pdf" />
+    <Content Include="webapp\fonts\icomoon\icomoon.eot" />
+    <Content Include="webapp\fonts\icomoon\icomoon.svg" />
+    <Content Include="webapp\fonts\icomoon\icomoon.ttf" />
+    <Content Include="webapp\fonts\icomoon\icomoon.woff" />
+    <Content Include="webapp\fonts\ionicons\css\ionicons.min.css" />
+    <Content Include="webapp\fonts\ionicons\css\_ionicons.scss" />
+    <Content Include="webapp\fonts\ionicons\fonts\.DS_Store" />
+    <Content Include="webapp\fonts\ionicons\fonts\ionicons.eot" />
+    <Content Include="webapp\fonts\ionicons\fonts\ionicons.svg" />
+    <Content Include="webapp\fonts\ionicons\fonts\ionicons.ttf" />
+    <Content Include="webapp\fonts\ionicons\fonts\ionicons.woff" />
+    <Content Include="webapp\fonts\ionicons\fonts\ionicons.woff2" />
+    <Content Include="webapp\fonts\open-iconic\open-iconic.eot" />
+    <Content Include="webapp\fonts\open-iconic\open-iconic.otf" />
+    <Content Include="webapp\fonts\open-iconic\open-iconic.svg" />
+    <Content Include="webapp\fonts\open-iconic\open-iconic.ttf" />
+    <Content Include="webapp\fonts\open-iconic\open-iconic.woff" />
+    <Content Include="webapp\images\.DS_Store" />
+    <Content Include="webapp\images\about.jpg" />
+    <Content Include="webapp\images\bg_1.jpg" />
+    <Content Include="webapp\images\bg_2.jpg" />
+    <Content Include="webapp\images\dashboard_full_1.jpg" />
+    <Content Include="webapp\images\dashboard_full_2.jpg" />
+    <Content Include="webapp\images\dashboard_full_3.jpg" />
+    <Content Include="webapp\images\image_1.jpg" />
+    <Content Include="webapp\images\image_2.jpg" />
+    <Content Include="webapp\images\image_3.jpg" />
+    <Content Include="webapp\images\image_4.jpg" />
+    <Content Include="webapp\images\image_5.jpg" />
+    <Content Include="webapp\images\image_6.jpg" />
+    <Content Include="webapp\images\loc.png" />
+    <Content Include="webapp\images\person_1.jpg" />
+    <Content Include="webapp\images\person_2.jpg" />
+    <Content Include="webapp\images\person_3.jpg" />
+    <Content Include="webapp\images\person_4.jpg" />
+    <Content Include="webapp\images\work-1.jpg" />
+    <Content Include="webapp\images\work-2.jpg" />
+    <Content Include="webapp\images\work-3.jpg" />
+    <Content Include="webapp\images\work-4.jpg" />
+    <Content Include="webapp\images\work-5.jpg" />
+    <Content Include="webapp\images\work-6.jpg" />
+    <Content Include="webapp\index.html" />
+    <Content Include="webapp\js\.DS_Store" />
+    <Content Include="webapp\js\aos.js" />
+    <Content Include="webapp\js\bootstrap-datepicker.js" />
+    <Content Include="webapp\js\bootstrap.min.js" />
+    <Content Include="webapp\js\google-map.js" />
+    <Content Include="webapp\js\jquery-3.2.1.min.js" />
+    <Content Include="webapp\js\jquery-migrate-3.0.1.min.js" />
+    <Content Include="webapp\js\jquery.animateNumber.min.js" />
+    <Content Include="webapp\js\jquery.easing.1.3.js" />
+    <Content Include="webapp\js\jquery.magnific-popup.min.js" />
+    <Content Include="webapp\js\jquery.min.js" />
+    <Content Include="webapp\js\jquery.stellar.min.js" />
+    <Content Include="webapp\js\jquery.waypoints.min.js" />
+    <Content Include="webapp\js\main.js" />
+    <Content Include="webapp\js\owl.carousel.min.js" />
+    <Content Include="webapp\js\particle.js" />
+    <Content Include="webapp\js\particles.min.js" />
+    <Content Include="webapp\js\popper.min.js" />
+    <Content Include="webapp\js\scrollax.min.js" />
+    <Content Include="webapp\Page1.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="webapp\portfolio-single.html" />
+    <Content Include="webapp\portfolio.html" />
+    <Content Include="webapp\scss\.DS_Store" />
+    <Content Include="webapp\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="webapp\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="webapp\scss\bootstrap\bootstrap.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="webapp\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="webapp\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="webapp\scss\bootstrap\_alert.scss" />
+    <Content Include="webapp\scss\bootstrap\_badge.scss" />
+    <Content Include="webapp\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="webapp\scss\bootstrap\_button-group.scss" />
+    <Content Include="webapp\scss\bootstrap\_buttons.scss" />
+    <Content Include="webapp\scss\bootstrap\_card.scss" />
+    <Content Include="webapp\scss\bootstrap\_carousel.scss" />
+    <Content Include="webapp\scss\bootstrap\_close.scss" />
+    <Content Include="webapp\scss\bootstrap\_code.scss" />
+    <Content Include="webapp\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="webapp\scss\bootstrap\_dropdown.scss" />
+    <Content Include="webapp\scss\bootstrap\_forms.scss" />
+    <Content Include="webapp\scss\bootstrap\_functions.scss" />
+    <Content Include="webapp\scss\bootstrap\_grid.scss" />
+    <Content Include="webapp\scss\bootstrap\_images.scss" />
+    <Content Include="webapp\scss\bootstrap\_input-group.scss" />
+    <Content Include="webapp\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="webapp\scss\bootstrap\_list-group.scss" />
+    <Content Include="webapp\scss\bootstrap\_media.scss" />
+    <Content Include="webapp\scss\bootstrap\_mixins.scss" />
+    <Content Include="webapp\scss\bootstrap\_modal.scss" />
+    <Content Include="webapp\scss\bootstrap\_nav.scss" />
+    <Content Include="webapp\scss\bootstrap\_navbar.scss" />
+    <Content Include="webapp\scss\bootstrap\_pagination.scss" />
+    <Content Include="webapp\scss\bootstrap\_popover.scss" />
+    <Content Include="webapp\scss\bootstrap\_print.scss" />
+    <Content Include="webapp\scss\bootstrap\_progress.scss" />
+    <Content Include="webapp\scss\bootstrap\_reboot.scss" />
+    <Content Include="webapp\scss\bootstrap\_root.scss" />
+    <Content Include="webapp\scss\bootstrap\_tables.scss" />
+    <Content Include="webapp\scss\bootstrap\_tooltip.scss" />
+    <Content Include="webapp\scss\bootstrap\_transitions.scss" />
+    <Content Include="webapp\scss\bootstrap\_type.scss" />
+    <Content Include="webapp\scss\bootstrap\_utilities.scss" />
+    <Content Include="webapp\scss\bootstrap\_variables.scss" />
+    <Content Include="webapp\scss\style.scss" />
+    <Content Include="services.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\" />
+    <Folder Include="webapp\" />
+    <Folder Include="webapp\css\" />
+    <Folder Include="webapp\css\bootstrap\" />
+    <Folder Include="webapp\css\css\" />
+    <Folder Include="webapp\css\css\mixins\" />
+    <Folder Include="webapp\fonts\" />
+    <Folder Include="webapp\fonts\flaticon\" />
+    <Folder Include="webapp\fonts\flaticon\font\" />
+    <Folder Include="webapp\fonts\flaticon\license\" />
+    <Folder Include="webapp\fonts\icomoon\" />
+    <Folder Include="webapp\fonts\ionicons\" />
+    <Folder Include="webapp\fonts\ionicons\css\" />
+    <Folder Include="webapp\fonts\ionicons\fonts\" />
+    <Folder Include="webapp\fonts\open-iconic\" />
+    <Folder Include="webapp\images\" />
+    <Folder Include="webapp\js\" />
+    <Folder Include="webapp\scss\" />
+    <Folder Include="webapp\scss\bootstrap\" />
+    <Folder Include="webapp\scss\bootstrap\mixins\" />
+    <Folder Include="webapp\scss\bootstrap\utilities\" />
+  </ItemGroup>
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
