@@ -35,6 +35,15 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="server.js" />
+    <Content Include="webapp\css\error.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="webapp\error.html">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="webapp\js\error.js">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="webapp\package.json" />
     <Content Include="README.md" />
     <Content Include="webapp\.DS_Store" />

@@ -1,23 +1,22 @@
 'use strict';
-var http = require('http'); // Servlet operations
-var fs = require('fs'); // Filesys
+var http = require('http') // Servlet operations
+var fs = require('fs') // Filesys
 var url = require('url'); // Url parsing
+const express = require('express');
+const app = express();
+var path = require("path");
 
 // Custom modules
-var fp = require('./scripts/index.js');
+var webpage_lookup = require('./scripts/index.js');
+const port = process.env.PORT || 1337;
 
-var port = process.env.PORT || 1337;
 
-http.createServer(function (req, res) {
+app.get('/', function (req, res) {
     var q = url.parse(req.url, true);
-    var filename = fp.getFile("." + q.pathname);
-    fs.readFile(filename, function (err, data) {
-        if (err) {
-            res.writeHead(404, { 'Content-Type': 'text/html' });
-            return res.end("404 Not Found");
-        } 
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        return res.end();
-    });
-}).listen(port);
+    var filename = webpage_lookup.getFile(q.pathname);
+    res.sendFile(path.join(__dirname + filename));
+});
+
+app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+
+
