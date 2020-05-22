@@ -31,7 +31,7 @@
     <Content Include="scripts\date.js">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="scripts\index.js">
+    <Content Include="scripts\pager.js">
       <SubType>Code</SubType>
     </Content>
     <Content Include="server.js" />
